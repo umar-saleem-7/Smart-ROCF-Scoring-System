@@ -1,0 +1,189 @@
+/* Base & reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, html, #root {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6ecf0;
+  color: #222;
+}
+
+/* Page container with optional dynamic background */
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Glass card style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Headings & text */
+.welcome-title, .upload-title {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.welcome-subtitle, .upload-subtitle {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 24px;
+}
+.upload-subtitle {
+  color: #fff;
+}
+
+/* Logo */
+.welcome-logo, .upload-logo {
+  display: block;
+  margin: 0 auto 16px;
+  width: 80px;
+  height: auto;
+}
+
+/* Buttons */
+.start-btn, .submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.start-btn {
+  background: #007bff;
+  margin-top: 20px;
+}
+
+.start-btn:hover {
+  background: #0056b3;
+}
+
+.submit-btn {
+  background: #28a745;
+  margin-top: 16px;
+}
+
+.submit-btn:hover {
+  background: #1e7e34;
+}
+
+/* Input fields */
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Flow-centered button groups */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+.button-group .submit-btn {
+  flex: 1;
+}
+
+/* QR container */
+.qr-container {
+  text-align: center;
+  padding: 20px;
+  margin: 24px 0;
+  background: rgba(0,0,0,0.1);
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* Upload Form multiple uploads */
+.upload-slot {
+  margin-bottom: 16px;
+}
+.upload-slot label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Score card styling */
+.score-card {
+  margin-top: 24px;
+  background: rgba(255,255,255,0.18);
+  padding: 20px;
+  border-radius: 16px;
+}
+.score-title {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.score-list {
+  list-style: none;
+  color: #222;
+}
+.score-list li {
+  margin-bottom: 8px;
+}
+
+/* Overlay image container */
+.overlay-container {
+  position: relative;
+  margin-top: 20px;
+}
+.overlay-container img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+.overlay-mask {
+  position: absolute;
+  top: 0; left: 0; right:0; bottom: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .score-card {
+    padding: 16px;
+  }
+}
